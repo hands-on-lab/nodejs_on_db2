@@ -4,10 +4,8 @@
   "description": "Hands on Labs!",
   "main": "server.js",
   "scripts": {
-    "start": "node build/server.js",
-    "dev": "npx ts-node src/server.ts | pino-pretty",
+    "start": "node -r dotenv/config src/server.js dotenv_config_path=.env",
     "watch": "nodemon -L -r dotenv/config src/server.js dotenv_config_path=.env",
-    "build": "tsc --build",
     "test": "jest --runInBand --setupFiles dotenv/config"
   },
   "dependencies": {
